@@ -3,6 +3,8 @@ import time,random,numpy as np
 from datetime import datetime
 import os.path
 pygame.init()
+dirname, filename = os.path.split(os.path.abspath(__file__))
+os. chdir(dirname)
 crash_sound = pygame.mixer.Sound("assets/crash.wav")
 display_width=800
 display_height=600
@@ -116,7 +118,7 @@ def showkey(key):
 
 def game_loop():
      ############
-    pygame.mixer.music.load('assets/music.wav')
+    pygame.mixer.music.load('assets/music.mp3')
     pygame.mixer.music.play(-1)
     ############
     gameExit = False
